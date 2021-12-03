@@ -2,7 +2,13 @@
   <div class="login">
     <div class="login-form-layout">
       <el-card type="flex" justify="center">
-        <el-form ref="loginForm" :model="loginForm" :rules="loginRules" status-icon label-width="80px">
+        <el-form
+          ref="loginForm"
+          :model="loginForm"
+          :rules="loginRules"
+          status-icon
+          label-position="left"
+        >
           <div style="text-align: center">
             <svg-icon icon-class="login-mall" style="width: 56px;height: 56px;color: #409EFF"></svg-icon>
           </div>

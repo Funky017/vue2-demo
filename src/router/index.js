@@ -10,6 +10,7 @@ export const routes = [
   //   component: Home
   // },
   {path: '/login',component: () =>import('@/views/Login')},
+  {path: '/login1',component: () =>import('@/views/Login1')},
   {path: '/success',component: () =>import('@/views/success')},
   {path: '/error',component: () =>import('@/views/error')},
   {

@@ -11,9 +11,10 @@ import '@/icons'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+// 使用Vuex + axios，全局配置不需要了
 // 全局配置
-Vue.prototype.$axios = axios
-Vue.config.productionTip = false
+// Vue.prototype.$axios = axios
+// Vue.config.productionTip = false
 
 new Vue({
   router,   // 使用路由配置

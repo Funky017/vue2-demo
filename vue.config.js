@@ -1,11 +1,13 @@
 const path = require('path')
 
 function resolve (dir) {
-  return path.join(__dirname, './', dir)
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
   chainWebpack: config => {
+    config.resolve.alias
+      .set('@', resolve('src'))
     config.plugin('define').tap(args => {
       const argv = process.argv
       const icourt = argv[argv.indexOf('--icourt-mode') + 1]
@@ -33,18 +35,5 @@ module.exports = {
       .rule('images')
       .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
   },
-  configureWebpack: {
-    devServer: {
-      open: true,
-      // https: true,
-      proxy: {
-        '/user': {
-          target: 'https://devadminschool.icourt.cc',
-        },
-        '/live': {
-          target: 'https://devadminschool.icourt.cc',
-        },
-      },
-    },
-  },
+
 }

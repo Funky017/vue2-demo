@@ -80,7 +80,7 @@ export default {
         if (valid) {
           this.loading = true;
           this.$store
-              .dispatch("Login", this.loginForm)
+              .dispatch("Login", this.loginForm)    // 触发action的“Login”函数
               .then(response => {
                 this.loading = false;
                 let code = response.data.code;

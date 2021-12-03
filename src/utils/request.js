@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
-import store from '../store'
+import store from '@/store'
 import { getToken } from '@/utils/auth'
 
 // 创建axios实例
@@ -21,7 +21,7 @@ service.interceptors.request.use(config => {
   Promise.reject(error)
 })
 
-// respone拦截器
+// response拦截器
 service.interceptors.response.use(
   response => {
     /**
