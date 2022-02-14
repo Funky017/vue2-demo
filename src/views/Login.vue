@@ -68,6 +68,7 @@ export default {
     };
   },
   methods: {
+    // 显示密码
     showPwd() {
       if (this.pwdType === "password") {
         this.pwdType = "";
@@ -84,7 +85,7 @@ export default {
               .then(response => {
                 this.loading = false;
                 let code = response.data.code;
-                if (code == 200) {
+                if (code === 200) {
                   this.$router.push({
                     path: "/success",
                     query: { data: response.data.data }
