@@ -11,7 +11,17 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    mounted() {
+      // 监听刷新事件
+      window.addEventListener('unload', this.saveState);
+    },
+    methods: {
+      saveState() {
+        // sessionStorage只能存字符串
+        sessionStorage.setItem('state', JSON.stringify(this.$store.state));
+      }
+    }
   }
 </script>
 

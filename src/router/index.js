@@ -4,6 +4,7 @@ import Register from '@/components/Register.vue'
 import Main from '@/views/Main.vue'
 import MemberList from "@/views/Member/MemberList";
 import MemberLevel from "@/views/Member/MemberLevel";
+import NotFound from "@/views/NotFound";
 Vue.use(VueRouter)
 
 export const routes = [
@@ -40,6 +41,10 @@ export const routes = [
   {
     path:'/goMain/:name',
     redirect: '/main/:name'   // 重定向
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 

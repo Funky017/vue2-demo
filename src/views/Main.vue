@@ -38,7 +38,7 @@
               <el-dropdown-item>退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>{{$route.params.name}}</span>
+          <span>{{$store.getters.getUser.name}}</span>
 <!--          <span>name</span>-->
         </el-header>
 

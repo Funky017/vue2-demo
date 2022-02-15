@@ -46,6 +46,9 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           // alert('submit!');
+          sessionStorage.setItem('isLogin', 'true');
+          // 執行action中的方法
+          this.$store.dispatch("asyncUpdateUser", {name:this.form.name});
           this.$router.push({name:'Main', params:{name:this.form.name}})   //跳转
         } else {
           this.$message({

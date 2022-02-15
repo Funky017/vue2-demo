@@ -5,6 +5,13 @@ function resolve (dir) {
 }
 
 module.exports = {
+  devServer: {
+    host: 'localhost',
+    port: '8090',
+    https: false,
+    hotOnly: false
+    // assetsPublicPath: '/' // 发布路径
+  },
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
